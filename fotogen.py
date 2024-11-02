@@ -4,7 +4,7 @@ import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define the image folder path relative to the script's location
-image_folder = os.path.join(script_dir, "images")
+image_folder = os.path.join(script_dir, "namefrom")
 output_file = os.path.join(script_dir, "generated_images.txt")
 
 # Check if the 'images' folder exists
@@ -22,10 +22,12 @@ placeholder_image = "assets/placeholder.png"
 html_output = []
 for image_name in os.listdir(image_folder):
     if os.path.splitext(image_name)[1].lower() in image_extensions:
+        # Remove leading underscores
+        clean_image_name = image_name.lstrip('_')
         html_output.append(f'''
         <div class="gallery-item">
             <div class="image-container">
-                <img class="placeholder" src="{placeholder_image}" data-src="images/{image_name}" alt="{image_name}">
+                <img class="placeholder" src="{placeholder_image}" data-src="images/{clean_image_name}" alt="{clean_image_name}">
             </div>
         </div>
         ''')
