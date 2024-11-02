@@ -80,14 +80,15 @@ img {
 	}
 }
 .download-button {
-	display: inline-block;
-	padding: 5px 10px;
-	color: #ab4141;
-	text-decoration: none;
-	transition: background-color .2s, transform .1s;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color .2s, transform .1s;
+    font-size: 22px;
 }
 .download-button:hover {
-	transform: scale(1.01);
+	transform: scale(1.02);
 }
 h3 {
 	color: #383838;
@@ -128,3 +129,26 @@ li{    font-size: medium;
 
 #copyr{    margin-top: 35px;
     padding-bottom: 35px;}
+
+	.banner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		overflow: hidden;
+	}
+	
+	.banner img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.actbtn{
+		color: #ffffff;
+		background-color: #1a1a1a;
+		padding: 10px;
+		border-radius: 7px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		display: inline-block;
+	}
