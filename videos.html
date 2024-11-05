@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogaleri - Adrian4Freedom</title>
+    <link rel="icon" type="image/x-icon" href="assets/Ico.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="gallery-container">
+    <!-- <h1>Fotogaleri</h1>
+    <h2>Vallja popullore e Shqiponjave</h2> -->
+    <div class="banner">
+        <img style="border-radius: 6px;" src="assets/placeholder.png" data-src="assets/banner.gif" alt="Banner">
+    </div>
+    <h2><a href="index.html" target="_blank">Go To Images</a></h2>
+    <!-- <h3 class="actbtn">Download All: <a href="images.zip" target="_blank" down class="download-button">&#x2193;</a></h3> -->
+    <ul><li>More Images/Gifs/Videos Added Everyday</li><li>Feel Free To Use & Share</li></ul>
+    <div class="gallery">
+        <iframe width="380" height="220" src="https://www.youtube.com/embed/e_1WCchcq3k" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="380" height="220" src="https://www.youtube.com/embed/Un1ODjkOSIE" title="Eagles Folk Dance Highlights Part 2 (Albanian Cup Event)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p id="copyr">Videos By Adrian - Folk Dance by Adrian is licensed under CC BY 4.0 - Expires Dec 4th</p>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll('img[data-src]');
+        
+        images.forEach(img => {
+            const realSrc = img.dataset.src;
+            
+            const tempImg = new Image();
+            tempImg.src = realSrc;
+            
+            tempImg.onload = function() {
+                img.src = realSrc; // Set the actual image source
+                img.style.display = 'block'; // Show the image
+                img.classList.remove('placeholder'); // Optionally remove the placeholder class
+            };
+    
+            img.onload = function() {
+                img.style.display = 'block'; // Ensure the image is visible
+            };
+        });
+    });
+    </script>
+    
+</body>
+</html>
+<!-- Coded by adrian - get your nose outta here -->
